@@ -1,0 +1,164 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-articles-data
+      author: MishaHMK
+      changes:
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-10T09:15:00Z"
+              - column:
+                  name: author_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: "Spring Boot REST Basics"
+              - column:
+                  name: content
+                  value: "Spring Boot makes it easy to create stand-alone, production-ready applications. In this article, we walk through creating a simple REST API using Spring Boot, Spring Web, and Spring Data JPA. We cover setting up the project with Maven, defining the entity model, creating a repository interface, and implementing a REST controller. We also discuss best practices for structuring the project, handling exceptions, and testing endpoints with Postman. By the end, you will have a working REST API with CRUD functionality that can be deployed to any environment."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-12T10:25:00Z"
+              - column:
+                  name: author_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: "Understanding Hibernate Fetch Types"
+              - column:
+                  name: content
+                  value: "Hibernate supports two primary fetching strategies: EAGER and LAZY. This article explains how each works, when to use them, and how they impact performance. We provide examples using @OneToMany, @ManyToOne, and @ManyToMany relationships. You will see how to switch between fetch types using annotations, and we will discuss how fetching strategies affect SQL queries and memory usage. We also address the N+1 query problem, how to detect it using logs, and how to solve it with JOIN FETCH. Finally, we share guidelines for choosing the right fetch strategy for your use case."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-18T14:45:00Z"
+              - column:
+                  name: author_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: "Java 21 New Features"
+              - column:
+                  name: content
+                  value: "Java 21 introduces several exciting features that improve developer productivity and code safety. In this article, we explore virtual threads from Project Loom, which simplify concurrent programming by reducing the cost of creating and managing threads. We also cover string templates, unnamed classes, and new APIs in the Collections framework. Each feature is explained with code examples to help you get started. Additionally, we discuss performance benchmarks comparing Java 21 with earlier versions, and we explore migration tips for upgrading existing projects to Java 21."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-28T12:05:00Z"
+              - column:
+                  name: author_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: "Securing APIs with JWT"
+              - column:
+                  name: content
+                  value: "JWT (JSON Web Token) is a compact, URL-safe means of representing claims securely between two parties. This article demonstrates how to integrate JWT authentication into a Spring Boot REST API. We start by adding the required dependencies, configuring security filters, and creating utility classes for token generation and validation. We also implement role-based access control and refresh token support. Real-world scenarios are provided, including securing endpoints for different user roles and protecting against token-related attacks. By the end, you will have a secure API ready for production deployment."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-22T17:28:45Z"
+              - column:
+                  name: author_id
+                  value: '3'
+              - column:
+                  name: title
+                  value: "Docker for Java Developers"
+              - column:
+                  name: content
+                  value: "Docker allows developers to package applications and dependencies into containers, ensuring consistency across environments. In this article, we explain how to containerize a Java application using a Dockerfile. We cover creating a multi-stage build to reduce image size, using OpenJDK base images, and setting environment variables. We also discuss how to manage Docker volumes, networks, and container orchestration basics. The article concludes with deployment tips, security best practices for images, and troubleshooting techniques for common Docker issues encountered in Java projects."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-08-10T13:55:25Z"
+              - column:
+                  name: author_id
+                  value: '3'
+              - column:
+                  name: title
+                  value: "Intro to Kubernetes"
+              - column:
+                  name: content
+                  value: "Kubernetes is a powerful orchestration platform for managing containerized applications at scale. This article covers the fundamental components of Kubernetes, including Pods, Deployments, Services, and ConfigMaps. We explain how to deploy a Java Spring Boot application on Kubernetes, configure scaling, and manage rolling updates. You will also learn about persistent volumes, secrets management, and basic networking in Kubernetes clusters. A step-by-step tutorial is provided to help you set up a local cluster using Minikube, deploy your application, and monitor it using built-in tools."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-08-05T16:08:07Z"
+              - column:
+                  name: author_id
+                  value: '3'
+              - column:
+                  name: title
+                  value: "Monitoring Apps with Prometheus and Grafana"
+              - column:
+                  name: content
+                  value: "Monitoring is critical for ensuring application health and performance. In this article, we integrate Prometheus and Grafana with a Spring Boot application to track key metrics like response time, error rate, and JVM memory usage. We explain how to expose metrics using Micrometer, configure Prometheus to scrape them, and visualize data in Grafana dashboards. We also discuss alerting rules, performance tuning, and strategies for monitoring microservices in distributed systems. Practical examples and configuration files are provided so you can replicate the setup in your own environment."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-21T22:15:55Z"
+              - column:
+                  name: author_id
+                  value: '4'
+              - column:
+                  name: title
+                  value: "Advanced Git Workflows"
+              - column:
+                  name: content
+                  value: "Git is a powerful version control system, and mastering advanced workflows can greatly improve team productivity. This article explains feature branching, Gitflow, and trunk-based development. We also cover rebasing versus merging, resolving complex merge conflicts, and managing large binary files with Git LFS. Examples are provided for integrating Git with CI/CD pipelines, automating code reviews, and enforcing commit message standards. Additionally, we discuss common pitfalls teams face when scaling Git usage and provide recommendations for keeping your repository clean and efficient."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-15T20:38:12Z"
+              - column:
+                  name: author_id
+                  value: '5'
+              - column:
+                  name: title
+                  value: "Building a CI/CD Pipeline with Jenkins"
+              - column:
+                  name: content
+                  value: "Continuous Integration and Continuous Delivery (CI/CD) help automate software development workflows, reduce errors, and accelerate releases. In this article, we set up a Jenkins pipeline for a Java application. We configure build steps, run automated tests, and deploy artifacts to staging environments. We also integrate static code analysis tools, configure webhooks for GitHub triggers, and set up notifications in Slack. The tutorial concludes with security best practices, such as securing Jenkins agents, managing credentials, and restricting plugin usage for better maintainability."
+
+        - insert:
+            tableName: articles
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-04T15:14:42Z"
+              - column:
+                  name: author_id
+                  value: '5'
+              - column:
+                  name: title
+                  value: "Design Patterns in Java"
+              - column:
+                  name: content
+                  value: "Design patterns provide proven solutions to common software design problems. In this article, we explore several popular patterns, including Singleton, Factory Method, Observer, and Builder. For each pattern, we provide a real-world example, UML diagram, and Java implementation. We discuss the advantages and trade-offs of using each pattern and provide tips for recognizing when a pattern might be overkill. Finally, we look at how modern Java features like lambdas and records can simplify or replace traditional design pattern implementations."

@@ -1,0 +1,99 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-user-data
+      author: MishaHMK
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: "george.price@example.com"
+              - column:
+                  name: password
+                  value: "$2a$12$6acMlxU.6hhwIZb/8IqINO257Ceztl75EsaKEe4YE4Yo3fW.V10gi" #securePassword123
+              - column:
+                  name: first_name
+                  value: "George"
+              - column:
+                  name: last_name
+                  value: "Price"
+              - column:
+                  name: role
+                  value: "ADMIN"
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: "olivia.baker@example.com"
+              - column:
+                  name: password
+                  value: "$2a$12$6acMlxU.6hhwIZb/8IqINO257Ceztl75EsaKEe4YE4Yo3fW.V10gi" #securePassword123
+              - column:
+                  name: first_name
+                  value: "Olivia"
+              - column:
+                  name: last_name
+                  value: "Baker"
+              - column:
+                  name: role
+                  value: "AUTHOR"
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: "zack.smith@example.com"
+              - column:
+                  name: password
+                  value: "$2a$12$6acMlxU.6hhwIZb/8IqINO257Ceztl75EsaKEe4YE4Yo3fW.V10gi" #securePassword123
+              - column:
+                  name: first_name
+                  value: "Zack"
+              - column:
+                  name: last_name
+                  value: "Smith"
+              - column:
+                  name: role
+                  value: "AUTHOR"
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: "alice.vance@example.com"
+              - column:
+                  name: password
+                  value: "$2a$12$6acMlxU.6hhwIZb/8IqINO257Ceztl75EsaKEe4YE4Yo3fW.V10gi" #securePassword123
+              - column:
+                  name: first_name
+                  value: "Alice"
+              - column:
+                  name: last_name
+                  value: "Vance"
+              - column:
+                  name: role
+                  value: "AUTHOR"
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: "saul.goodman@example.com"
+              - column:
+                  name: password
+                  value: "$2a$12$6acMlxU.6hhwIZb/8IqINO257Ceztl75EsaKEe4YE4Yo3fW.V10gi" #securePassword123
+              - column:
+                  name: first_name
+                  value: "Saul"
+              - column:
+                  name: last_name
+                  value: "Goodman"
+              - column:
+                  name: role
+                  value: "AUTHOR"
