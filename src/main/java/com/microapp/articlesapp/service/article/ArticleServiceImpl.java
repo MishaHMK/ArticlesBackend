@@ -26,8 +26,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public ArticleDto getById(Long id) {
         Article articleById = getArticleById(id);
-        return articleMapper.toDto(articleById
-        );
+        return articleMapper.toDto(articleById);
     }
 
     @Override
