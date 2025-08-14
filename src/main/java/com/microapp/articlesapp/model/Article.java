@@ -7,7 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.time.OffsetDateTime;
@@ -23,8 +22,8 @@ import org.hibernate.annotations.SQLRestriction;
 @Setter
 @NoArgsConstructor
 @Accessors(chain = true)
-@SQLDelete(sql = "UPDATE articles SET is_deleted = true,"
-        + "WHERE id = ?")
+@SQLDelete(sql = "UPDATE articles SET is_deleted = true"
+        + " WHERE id = ?")
 @SQLRestriction(value = "is_deleted = false")
 @Table(name = "articles")
 public class Article {
@@ -32,15 +31,14 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "author_id", nullable = false)
     private User author;
 
     @Column(nullable = false, length = 100)
     private String title;
 
-    @Lob
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(nullable = false, length = 10000)
     private String content;
 
     @Column(nullable = false)

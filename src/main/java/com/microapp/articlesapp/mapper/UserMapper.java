@@ -8,6 +8,7 @@ import com.microapp.articlesapp.dto.userdata.UserDto;
 import com.microapp.articlesapp.model.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
+import org.mapstruct.Named;
 
 @Mapper(config = MapperConfig.class)
 public interface UserMapper {
@@ -18,4 +19,14 @@ public interface UserMapper {
     UserRegisterResponseDto toResponse(User user);
 
     void updateFromDto(UpdateUserDataDto dto, @MappingTarget User user);
+
+    @Named("userFromId")
+    default User userFromId(Long id) {
+        if (id == null) {
+            return null;
+        }
+        User user = new User();
+        user.setId(id);
+        return user;
+    }
 }

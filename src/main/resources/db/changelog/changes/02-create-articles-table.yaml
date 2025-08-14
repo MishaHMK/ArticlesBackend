@@ -25,12 +25,12 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: title
-                  type: varchar
+                  type: varchar(100)
                   constraints:
                     nullable: false
               - column:
                   name: content
-                  type: text
+                  type: varchar(10000)
                   constraints:
                     nullable: false
               - column:
