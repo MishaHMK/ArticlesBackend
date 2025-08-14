@@ -10,7 +10,5 @@ public class UserRegisterResponseDto {
     private String email;
     private String firstName;
     private String lastName;
-    private String fatherName;
-    private String gender;
     private String role;
 }
