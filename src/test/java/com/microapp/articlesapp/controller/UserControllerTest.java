@@ -85,7 +85,7 @@ class UserControllerTest {
 
     @Test
     void removeCurrentUser_returnsNoContent() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.put("/users/delete"))
+        mockMvc.perform(MockMvcRequestBuilders.delete("/users/delete"))
                 .andExpect(status().isOk());
 
         Mockito.verify(userService).deleteUser();
