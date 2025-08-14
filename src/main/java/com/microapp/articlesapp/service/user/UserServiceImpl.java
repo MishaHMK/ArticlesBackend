@@ -14,7 +14,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-@Transactional
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -22,6 +21,7 @@ public class UserServiceImpl implements UserService {
     private final BCryptPasswordEncoder passwordEncoder;
     private final UserMapper userMapper;
 
+    @Transactional
     @Override
     public UserRegisterResponseDto save(UserRegisterRequestDto requestDto) {
         if (userRepository.existsByEmail(requestDto.getEmail())) {
@@ -39,12 +39,14 @@ public class UserServiceImpl implements UserService {
         return userMapper.toUserDto(SecurityUtil.getLoggedInUser());
     }
 
+    @Transactional
     @Override
     public void deleteUser() {
         User user = SecurityUtil.getLoggedInUser();
         userRepository.deleteById(user.getId());
     }
 
+    @Transactional
     @Override
     public UserDto updateUser(UpdateUserDataDto updateDto) {
         User currentUser = SecurityUtil.getLoggedInUser();
