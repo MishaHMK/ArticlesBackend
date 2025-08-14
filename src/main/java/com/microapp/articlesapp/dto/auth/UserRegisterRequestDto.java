@@ -24,8 +24,6 @@ public class UserRegisterRequestDto {
     private String firstName;
     @NotBlank(message = "Last name is required")
     private String lastName;
-    @NotBlank(message = "Father name is required")
-    private String fatherName;
     @NotBlank(message = "Password is required")
     @Length(min = 8, max = 20,
             message = "Password size must be between "
